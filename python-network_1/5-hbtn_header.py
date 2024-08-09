@@ -1,15 +1,13 @@
 #!/usr/bin/python3
-"""
-A Python script that sends a request to the URL and
-displays the value of a variable in the response header
-"""
+"""take a url and display the values"""
+
+
 import requests
 import sys
 
 
 if __name__ == "__main__":
-    try:
-        r = requests.get(sys.argv[1])
-        print(r.headers['X-Request-Id'])
-    except:
-        pass
+    """display the contents"""
+    url = sys.argv[1]
+    response = requests.get(url)
+    print("{}".format(response.headers.get('X-Request-Id')))
