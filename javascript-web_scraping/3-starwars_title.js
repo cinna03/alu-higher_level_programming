@@ -1,4 +1,6 @@
-t request = require('request');
+#!/usr/bin/node
+
+const request = require('request');
 
 if (process.argv.length > 2) {
   const movieId = process.argv[2];
