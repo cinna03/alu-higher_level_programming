@@ -1,4 +1,6 @@
-t fs = require('fs');
+#!/usr/bin/node
+
+const fs = require('fs');
 
 function writeFile (filePath, content) {
   fs.writeFile(filePath, content, 'utf-8', (err) => {
